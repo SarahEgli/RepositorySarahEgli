@@ -1,13 +1,23 @@
 Week 1: bis und mit Ubelix1 task
-week 2: just chilling
+
+Important links:
+Putty download: https://www.putty.org 
+Filezilla download: https://filezilla-project.org
+  Filezilla is used to transfer files between servers. Download the client
+Terminal cheatsheet (guide for terminal commands): https://cheatography.com/davechild/cheat-sheets/linux-command-line/ 
+
 
 Setup: Access to chemzilla
   Chemzilla is the reymond teaching computer, which we will use over remote desktop to perform the tutorial.
   Access was granted by Sacha Javor
-  The IP address off Chemzilla, a username and password was provided. Then you can log in and work over remote desktop
+  The IP address off Chemzilla, a username and password was provided. Then you can log in and work over remote desktop.
+  Access to chemzilla works only in the university network or over vpn
 Access to Ubelix:
+https://hpc-unibe-ch.github.io 
 ...
 ...
 
 Tutorial 1:
+http://www.mdtutorials.com/gmx/
+
   
