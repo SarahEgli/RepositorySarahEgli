@@ -14,7 +14,12 @@ Setup: Access to chemzilla
   Access to chemzilla works only in the university network or over vpn
 Access to Ubelix:
 https://hpc-unibe-ch.github.io 
-...
+Acess requested, acess confirmed.
+ID number: ID0067630
+Acknowlegement for presenting results: "Calculations were performed on UBELIX (http://www.id.unibe.ch/hpc), the HPC cluster at the University of Bern."
+Ubelix documentation: https://listserv.unibe.ch/mailman/listinfo/hpc-users
+Log in to UBELIX: ssh ma19q089@submit.unibe.ch
+Contact for questions: https://serviceportal.unibe.ch/sp
 ...
 
 Tutorial 1:
