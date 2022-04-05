@@ -12,6 +12,7 @@ Setup: Access to chemzilla
   Access was granted by Sacha Javor
   The IP address off Chemzilla, a username and password was provided. Then you can log in and work over remote desktop.
   Access to chemzilla works only in the university network or over vpn
+  
 Access to Ubelix:
 https://hpc-unibe-ch.github.io 
 Acess requested, acess confirmed.
@@ -20,10 +21,12 @@ Acknowlegement for presenting results: "Calculations were performed on UBELIX (h
 Ubelix documentation: https://listserv.unibe.ch/mailman/listinfo/hpc-users
 Log in to UBELIX: ssh ma19q089@submit.unibe.ch
 Contact for questions: https://serviceportal.unibe.ch/sp
-...
+
 
 Tutorial 1:
 http://www.mdtutorials.com/gmx/
 Follow the Tutorial with your own protein of choice
-Pre-cleaned 
+A pre-cleaned pdb file of Protein 2UPJ was provided by Sacha Javor
+At step "Equilibration", command 'gmx mdrun -deffnm nvt' will take a while (in our case 10-15min) before it finishes. Do not be confused by the
+unfinished output while the command is running.
   
