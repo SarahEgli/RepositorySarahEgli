@@ -29,4 +29,27 @@ Follow the Tutorial with your own protein of choice
 A pre-cleaned pdb file of Protein 2UPJ was provided by Sacha Javor
 At step "Equilibration", command 'gmx mdrun -deffnm nvt' will take a while (in our case 10-15min) before it finishes. Do not be confused by the
 unfinished output while the command is running.
-  
+
+
+Ubelix Hello world:
+
+
+[se19x010@submit01 ~]$ cd hello_world
+[se19x010@submit01 hello_world]$ pwd
+/storage/homefs/se19x010/hello_world
+[se19x010@submit01 hello_world]$ nano hello.py #create python script you want to run
+...
+[se19x010@submit01 hello_world]$ [se19x010@submit01 hello_world]$ ls
+hello.py  hello.txt
+[se19x010@submit01 hello_world]$ nano job.sh #create specifics of job you want to submit
+...
+[se19x010@submit01 hello_world]$ [se19x010@submit01 hello_world]$ sbatch job.sh #submit job
+Submitted batch job 25008443
+[se19x010@submit01 hello_world]$ ls -l
+total 2
+-rw-rw-r-- 1 se19x010 students  34 Apr  6 17:35 hello.py
+-rw-rw-r-- 1 se19x010 students  25 Apr  6 17:02 hello.txt
+-rw-rw-r-- 1 se19x010 students 166 Apr  6 17:36 job.sh
+-rw-rw-r-- 1 se19x010 students  25 Apr  6 17:36 slurm-25008443.out
+[se19x010@submit01 hello_world]$ cat slurm-25008443.out
+Hello Ubelix, I am Sarah  
