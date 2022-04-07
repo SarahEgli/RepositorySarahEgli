@@ -33,16 +33,22 @@ unfinished output while the command is running.
 
 Ubelix Hello world:
 
-
 [se19x010@submit01 ~]$ cd hello_world
 [se19x010@submit01 hello_world]$ pwd
 /storage/homefs/se19x010/hello_world
 [se19x010@submit01 hello_world]$ nano hello.py #create python script you want to run
-...
+  print('Hello Ubelix, I am Sarah')
 [se19x010@submit01 hello_world]$ [se19x010@submit01 hello_world]$ ls
 hello.py  hello.txt
 [se19x010@submit01 hello_world]$ nano job.sh #create specifics of job you want to submit
-...
+  #!/bin/bash
+  #SBATCH --job-name="First example"
+  #SBATCH --time=00:10:00
+  #SBATCH --mem-per-cpu=1G
+
+  # Your code below this line
+  module load Python
+  srun python3 hello.py
 [se19x010@submit01 hello_world]$ [se19x010@submit01 hello_world]$ sbatch job.sh #submit job
 Submitted batch job 25008443
 [se19x010@submit01 hello_world]$ ls -l
@@ -53,3 +59,6 @@ total 2
 -rw-rw-r-- 1 se19x010 students  25 Apr  6 17:36 slurm-25008443.out
 [se19x010@submit01 hello_world]$ cat slurm-25008443.out
 Hello Ubelix, I am Sarah  
+
+
+
