@@ -19,7 +19,7 @@ Acess requested, acess confirmed.
 ID number: ID0067630
 Acknowlegement for presenting results: "Calculations were performed on UBELIX (http://www.id.unibe.ch/hpc), the HPC cluster at the University of Bern."
 Ubelix documentation: https://listserv.unibe.ch/mailman/listinfo/hpc-users
-Log in to UBELIX: ssh ma19q089@submit.unibe.ch
+Log in to UBELIX: ssh ma19q089@submit.unibe.ch (on windows powershell or on linux terminal)
 Contact for questions: https://serviceportal.unibe.ch/sp
 
 
@@ -61,4 +61,50 @@ total 2
 Hello Ubelix, I am Sarah  
 
 
+
+Moving a file from local workstation to ubelix (on a linux computer)
+on terminal write: scp ~/dir/file01 <username>@submit.unibe.ch:
+Then the file will be in the home directory of your ubelix, you can move it there with the 'mv' command
+
+Ubelix job script with Ilias file:
+  #!/bin/bash
+  #SBATCH --job-name="try2"
+  #SBATCH --time=00:10:00
+  #SBATCH --mem-per-cpu=1G
+
+  # Your code below this line
+  module load GROMACS
+  gmx mdrun -deffnm DSF-MD-Prod4Ubelixmdp.sec
+
+
+Error when executing run:
+  Program:     gmx mdrun, version 2020-MODIFIED
+  Source file: src/gromacs/options/options.cpp (line 179)
+  Function:    void gmx::internal::OptionSectionImpl::finish()
+
+  Error in user input:
+  Invalid input values
+    In option s
+      Required option was not provided, and the default file 'topol' does not
+      exist or is not accessible.
+      The following extensions were tried to complete the file name:
+        .tpr
+
+  For more information and tips for troubleshooting, please check the GROMACS
+  website at http://www.gromacs.org/Documentation/Errors
+
+
+Ubelix job script with own output of tutorial
+first, moved all neccessary files to ubelix:
+topol_Protein_chain_A.itp, npt.cpt, topol_Protein_chain_B.itp
+md_0_1.tpr,  npt.gro ,  topol.top, md.mdp 
+job run file:
+#!/bin/bash
+#SBATCH --job-name="First_run"
+#SBATCH --time=00:10:00
+#SBATCH --mem-per-cpu=1G
+
+# Your code below this line
+module load GROMACS
+gmx mdrun -deffnm md_0_1
 
