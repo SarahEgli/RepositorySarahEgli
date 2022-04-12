@@ -108,3 +108,13 @@ job run file:
 module load GROMACS
 gmx mdrun -deffnm md_0_1
 
+job_run_grompp.sh
+#!/bin/bash
+#SBATCH --job-name="First_run"
+#SBATCH --time=00:10:00
+#SBATCH --mem-per-cpu=1G
+
+# Your code below this line
+module load GROMACS
+gmx grompp -f DSF-MD-Prod4Ubelix.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+
